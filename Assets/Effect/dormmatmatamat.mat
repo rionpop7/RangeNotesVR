@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: dormmatmatamat
+  m_Shader: {fileID: -6465566751694194690, guid: 1279cd68df82756469a2c3990a50c05e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_f1cdbb6cb1c44926a388d67e732f8307_Texture_1:
+        m_Texture: {fileID: 2800000, guid: eee7a846d3aeaa84689d60b2ba670473, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_262b22b55d6a4f2093acd4fb682c46a0: 5
+    - Vector1_6fa1a6854f1e4326bac4fafc26ec61fd: 0.5
+    - _EdgeOffset: 1
+    - _FresnelPower: 4
+    m_Colors:
+    - Color_81f4dfabb202441f9a90faf50b5072f1: {r: 0, g: 0.17472535, b: 0.72549003, a: 1}
+    - _Color: {r: 3.137255, g: 6.901961, b: 0.9411765, a: 1}
+    - _Speed: {r: 0.06, g: 0.02, b: 0.6, a: 0.2}
+  m_BuildTextureStacks: []
