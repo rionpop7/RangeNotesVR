@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0c5fa5d3bd15641459865aaebfc1c465
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - displayObject: {instanceID: 0}
+  - activationEffect: {instanceID: 0}
+  - hitEffect: {fileID: 8913016636985017516, guid: 2cfca06b4f7954998824b4e42e2eb30b, type: 3}
+  - scoreCounter: {instanceID: 0}
+  - SE: {instanceID: 0}
+  - CLIP: {instanceID: 0}
+  - Arrow: {fileID: 3482950084637961147, guid: 5d52245d8f28a59448d490ca8625d69a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
