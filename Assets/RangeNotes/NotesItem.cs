@@ -17,7 +17,6 @@ public class NotesItem : PlayingEventItem
     public ScoreCounter scoreCounter;
     public ComboCounter comboCounter;
     public int ComboScore;
-    public AudioSource SE;
     public AudioClip CLIP;
     public ParticleSystem Arrow;
     public SphereCollider Collider;
@@ -41,7 +40,6 @@ public class NotesItem : PlayingEventItem
             {
                 hitEffect.Play(true);
                 HitChecker = true;
-                SE.PlayOneShot(CLIP);
                 Collider.enabled = false;
                 Invoke(nameof(DelayMethod), 2f);
             }
