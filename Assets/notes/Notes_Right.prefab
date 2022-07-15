@@ -4959,7 +4959,6 @@ GameObject:
   - component: {fileID: 3373517546660720464}
   - component: {fileID: 3373517546660720467}
   - component: {fileID: 3373517546660720468}
-  - component: {fileID: -3624140329858903723}
   m_Layer: 0
   m_Name: Notes_Right
   m_TagString: Untagged
@@ -5019,14 +5018,14 @@ MonoBehaviour:
   scoreCounter: {fileID: 175324474521337238, guid: a0f10501271b18d47a65e9a70592e90c, type: 3}
   comboCounter: {fileID: 2367267174504433474, guid: 0d69d6870fa55eb40896eba726867b21, type: 3}
   ComboScore: 0
-  SE: {fileID: 0}
+  SE: {fileID: 7199913000507453694, guid: 0eb5defc6b3905f4986c98612c6b0389, type: 3}
   CLIP: {fileID: 8300000, guid: 4f86013344e671142b8143b1037f9d95, type: 3}
   Arrow: {fileID: 3373517545755125528}
   Collider: {fileID: 3373517546660720468}
   hitCallback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -3624140329858903723}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScoreCounter, Assembly-CSharp
         m_MethodName: AddScore
         m_Mode: 3
@@ -5081,20 +5080,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3624140329858903723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3373517546660720478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97cd740f0fed4408d883c292e85ea088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  scoreDisplay: {fileID: 0}
 --- !u!1001 &3373517546738071037
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -32,10 +32,11 @@ public class NotesItem : PlayingEventItem
     #region UNITY_EVENT
     void OnTriggerEnter(Collider other)
     {
+        
         if (isPlaying && _tagCheck(other))
         {
             displayObject.SetActive(false);
-            hitCallback?.Invoke(0);
+        //    hitCallback?.Invoke(0);
 
             if (hitEffect != null)
             {
