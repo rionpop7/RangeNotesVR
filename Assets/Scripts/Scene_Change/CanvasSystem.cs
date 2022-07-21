@@ -13,18 +13,34 @@ public class CanvasSystem : MonoBehaviour
     public GameObject Volume;
     public GameObject LoadPlay1;
     public GameObject LoadPlay2;
+    public GameObject WhiteCanvas;
     public AudioSource SE;
     public AudioClip Voice01;
     public AudioClip Voice02;
+    public AudioClip Voice15;
+    public AudioClip Back;
+    public AudioClip SoundLogo;
 
     void Start()
     {
-        CanvasA.SetActive(true);
+    
         CanvasB.SetActive(false);
         Option.SetActive(false);
         Dorm.SetActive(false);
         ScaleSetting.SetActive(false);
         Volume.SetActive(false);
+        WhiteCanvas.SetActive(true);
+        StartCoroutine(DelayCoroutine());
+
+    }
+
+    private IEnumerator DelayCoroutine()
+    {
+        // 3•bŠÔ‘Ò‚Â
+        yield return new WaitForSeconds(1.5f);
+        SE.PlayOneShot(SoundLogo);
+        SE.PlayOneShot(Voice15);
+        CanvasA.SetActive(true);
 
     }
 
@@ -42,6 +58,7 @@ public class CanvasSystem : MonoBehaviour
         CanvasA.SetActive(true);
         CanvasB.SetActive(false);
         Option.SetActive(false);
+        SE.PlayOneShot(Back);
     }
 
     public void ToOption()
@@ -63,6 +80,7 @@ public class CanvasSystem : MonoBehaviour
         Option.SetActive(true);
         Dorm.SetActive(false);
         Volume.SetActive(false);
+        SE.PlayOneShot(Back);
     }
 
     public void VolumeSetting()

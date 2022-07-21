@@ -6,6 +6,8 @@ using UnityEditor.UI;
 
 public class ScrollButtonController : MonoBehaviour
 {
+    public AudioSource SE;
+    public AudioClip Scroll;
     public RectTransform scrollPos;
     public float offsetVal = 47f;
    // public ScrollRect scrollRect;
@@ -20,12 +22,14 @@ public class ScrollButtonController : MonoBehaviour
     public void OnTapUp()
     {
         Debug.Log("up");
+        SE.PlayOneShot(Scroll);
         scrollPos.localPosition = new Vector3(0f, scrollPos.localPosition.y + offsetVal, 0f);
     }
 
     public void OnTapDown()
     {
         Debug.Log("down");
+        SE.PlayOneShot(Scroll);
         scrollPos.localPosition = new Vector3(0f, scrollPos.localPosition.y - offsetVal, 0f);
     }
 }
