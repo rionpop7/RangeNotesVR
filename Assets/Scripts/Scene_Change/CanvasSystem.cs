@@ -13,6 +13,9 @@ public class CanvasSystem : MonoBehaviour
     public GameObject Volume;
     public GameObject LoadPlay1;
     public GameObject LoadPlay2;
+    public AudioSource SE;
+    public AudioClip Voice01;
+    public AudioClip Voice02;
 
     void Start()
     {
@@ -31,6 +34,7 @@ public class CanvasSystem : MonoBehaviour
     {
         CanvasA.SetActive(false);
         CanvasB.SetActive(true);
+        SE.PlayOneShot(Voice01);
     }
 
     public void ToMain()
@@ -72,7 +76,7 @@ public class CanvasSystem : MonoBehaviour
 
     public void Tutorial()
     {
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene("Tutorial_Scene");
     }
 
     public void Load_BurningHeart()

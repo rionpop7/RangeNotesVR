@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using SeikaGameKit.Timeline;
+using System.Collections;
 
 public class NotesItem : PlayingEventItem
 {
@@ -24,6 +25,17 @@ public class NotesItem : PlayingEventItem
 
     //コンボに関するブール
     bool HitChecker = false;
+    public static IEnumerator Vibrate(float duration = 0.1f, float frequency = 0.1f, float amplitude = 0.5f, OVRInput.Controller controller = OVRInput.Controller.Active)
+    {
+        //コントローラーを振動させる
+        OVRInput.SetControllerVibration(frequency, amplitude, controller);
+
+        //指定された時間待つ
+        yield return new WaitForSeconds(duration);
+
+        //コントローラーの振動を止める
+        OVRInput.SetControllerVibration(0, 0, controller);
+    }
 
     [Space]
     public UnityEvent<int> hitCallback;
@@ -45,6 +57,7 @@ public class NotesItem : PlayingEventItem
                 SE.PlayOneShot(CLIP);
                 Collider.enabled = false;
                 Invoke(nameof(DelayMethod), 2f);
+                StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.Active));
             }
 
 
