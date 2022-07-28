@@ -36,6 +36,10 @@ public class NotesItem : PlayingEventItem
         //コントローラーの振動を止める
         OVRInput.SetControllerVibration(0, 0, controller);
     }
+    void start() //OVRvibration lefthand on
+    {
+        Lefthand = true;
+    }
 
     [Space]
     public UnityEvent<int> hitCallback;
@@ -44,7 +48,6 @@ public class NotesItem : PlayingEventItem
     #region UNITY_EVENT
     void OnTriggerEnter(Collider other)
     {
-        
         if (isPlaying && _tagCheck(other))
         {
             displayObject.SetActive(false);
@@ -57,9 +60,18 @@ public class NotesItem : PlayingEventItem
                 SE.PlayOneShot(CLIP);
                 Collider.enabled = false;
                 Invoke(nameof(DelayMethod), 2f);
-                StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.Active));
-            }
 
+                if (Lefthand == true) //左手を振動
+                {
+                    StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
+                    Debug.Log($"Lefthand is vibrationg");
+                }
+                if(Lefthand == false) //右手を振動
+                {
+                    StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
+                    Debug.Log($"Righthand is vibrationg");
+                }
+            }
 
             //if (hitEffect != null)
             {
@@ -72,7 +84,7 @@ public class NotesItem : PlayingEventItem
             {
                 Debug.Log($"Fast");
                 scoreCounter.AddScore(50);
-                comboCounter.ComboScore(0);
+                comboCounter.ComboScore(1);
             }
             else if (normalizedTime > 0.4f && normalizedTime <= 0.6f)
             {
@@ -84,7 +96,7 @@ public class NotesItem : PlayingEventItem
             {
                 Debug.Log($"Slow");
                 scoreCounter.AddScore(25);
-                comboCounter.ComboScore(0);
+                comboCounter.ComboScore(1);
             }
 
 
@@ -93,6 +105,7 @@ public class NotesItem : PlayingEventItem
 
     }
 
+    private bool Lefthand; //check lefthand or righthand
 
     //コライダー消す
     void DelayMethod()
@@ -150,12 +163,13 @@ public class NotesItem : PlayingEventItem
     #region PRIVATE_METHODS
     bool _tagCheck(Collider other)
     {
-        if (bothTag)
+        if (bothTag) //both hand activate
         {
             return (other.CompareTag(_targetTagName1) || other.CompareTag(_targetTagName2));
         }
-        else
+        else //righthand
         {
+            Lefthand = false; //OVRvibration righthand on
             return (other.CompareTag(_targetTagName1));
         }
         

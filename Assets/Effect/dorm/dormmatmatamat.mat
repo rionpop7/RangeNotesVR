@@ -40,8 +40,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_262b22b55d6a4f2093acd4fb682c46a0: 5
-    - Vector1_6fa1a6854f1e4326bac4fafc26ec61fd: 0.5
+    - Vector1_262b22b55d6a4f2093acd4fb682c46a0: 0
+    - Vector1_6fa1a6854f1e4326bac4fafc26ec61fd: 101.4
     - _EdgeOffset: 1
     - _FresnelPower: 4
     m_Colors:

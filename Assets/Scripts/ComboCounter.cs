@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ComboCounter : MonoBehaviour
 {
-    public int combo;
+    public int combo = 0;
     public Text comboDisplay;
 
 
