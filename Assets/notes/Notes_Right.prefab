@@ -4959,6 +4959,7 @@ GameObject:
   - component: {fileID: 3373517546660720464}
   - component: {fileID: 3373517546660720467}
   - component: {fileID: 3373517546660720468}
+  - component: {fileID: -1873604931243388425}
   m_Layer: 0
   m_Name: Notes_Right
   m_TagString: Untagged
@@ -4975,7 +4976,7 @@ Transform:
   m_GameObject: {fileID: 3373517546660720478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.0513322, y: 1.1510513, z: -0.73252344}
-  m_LocalScale: {x: 0.37877005, y: 0.37877005, z: 0.37877005}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 3373517545607539408}
   - {fileID: 3373517545595694669}
@@ -5020,7 +5021,8 @@ MonoBehaviour:
   ComboScore: 0
   SE: {fileID: 7199913000507453694, guid: 0eb5defc6b3905f4986c98612c6b0389, type: 3}
   CLIP: {fileID: 8300000, guid: 4f86013344e671142b8143b1037f9d95, type: 3}
-  Arrow: {fileID: 3373517545755125528}
+  Faile: {fileID: 8300000, guid: 9242f508f887fdd48af8c185f9417f55, type: 3}
+  Arrow: {fileID: 0}
   Collider: {fileID: 3373517546660720468}
   hitCallback:
     m_PersistentCalls:
@@ -5078,8 +5080,24 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1873604931243388425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373517546660720478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db369c7953c53284abf73b9e1a28738a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  scoreCounter: {fileID: 0}
+  comboCounter: {fileID: 0}
+  Faile: {fileID: 0}
 --- !u!1001 &3373517546738071037
 PrefabInstance:
   m_ObjectHideFlags: 0

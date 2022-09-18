@@ -20,10 +20,11 @@ public class CanvasSystem : MonoBehaviour
     public AudioClip Voice15;
     public AudioClip Back;
     public AudioClip SoundLogo;
+    public AudioClip MainThemeLoop;
 
     void Start()
     {
-    
+
         CanvasB.SetActive(false);
         Option.SetActive(false);
         Dorm.SetActive(false);
@@ -31,6 +32,7 @@ public class CanvasSystem : MonoBehaviour
         Volume.SetActive(false);
         WhiteCanvas.SetActive(true);
         StartCoroutine(DelayCoroutine());
+        StartCoroutine(DelayCoroutine1());
 
     }
 
@@ -41,7 +43,14 @@ public class CanvasSystem : MonoBehaviour
         SE.PlayOneShot(SoundLogo);
         SE.PlayOneShot(Voice15);
         CanvasA.SetActive(true);
+        WhiteCanvas.SetActive(false);
 
+    }
+
+    private IEnumerator DelayCoroutine1()
+    {
+    yield return new WaitForSeconds(5f);
+    SE.PlayOneShot(MainThemeLoop);
     }
 
     public GameObject Onclick;
@@ -97,9 +106,6 @@ public class CanvasSystem : MonoBehaviour
         SceneManager.LoadScene("Tutorial_Scene");
     }
 
-    public void Load_BurningHeart()
-    {
-        SceneManager.LoadScene("Scene_BuringHeart");
-    }
+  
 
 }
