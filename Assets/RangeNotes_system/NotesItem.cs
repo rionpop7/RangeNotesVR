@@ -95,7 +95,7 @@ public class NotesItem : PlayingEventItem
             else if (normalizedTime > 0.6f)
             {
                 Debug.Log($"Too Slow");
-                scoreCounter.AddScore(25);
+                scoreCounter.AddScore(50);
                 comboCounter.ComboScore(0);
                 SE.PlayOneShot(Faile);
             }

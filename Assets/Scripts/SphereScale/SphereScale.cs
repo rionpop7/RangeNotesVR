@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SphereScale : MonoBehaviour
 {
-    public static float scale = 1.8f;  //scale
+    public static float scale = 1.7f;  //scale
     public Slider slider;
     public GameObject pivot;
 

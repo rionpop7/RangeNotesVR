@@ -29,14 +29,14 @@ public class ComboCounter : MonoBehaviour
             combo = 0;
             PlayerPrefs.SetInt("combo", 0);
             PlayerPrefs.Save();
-            comboDisplay.text = "Combo 0";
+            comboDisplay.text = "";
         }
 
         else if (point > 0) //Combo Success
         {
             comboDisplay.enabled = true;
             combo += point;
-            comboDisplay.text = $"Combo {combo}";
+            comboDisplay.text = $"x {combo}";
         }
     }
 }

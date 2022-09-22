@@ -16,9 +16,9 @@ public class BackScene : MonoBehaviour
     {
         //コルーチンの内容
         Debug.Log("スタート");
-        yield return new WaitForSeconds(25.0f);
+        yield return new WaitForSeconds(20.0f);
         Debug.Log("スタートから25秒後");
-        SceneManager.LoadScene("Tittle_Scene");
+        SceneManager.LoadScene("Results");
     }
 
 }
